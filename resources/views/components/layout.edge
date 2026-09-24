@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="NOVABAT Construction — entreprise générale de bâtiment en Île-de-France : construction neuve, gros œuvre, rénovation lourde, surélévation et aménagement intérieur haut de gamme."
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <title>NOVABAT Construction • Ingénierie & Bâtiment en Île-de-France</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('dumper')
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    @include('partials/header')
+
+    {{-- Le header est fixe : 2.5rem (bandeau contact) + 5rem (barre de nav) = 7.5rem --}}
+    <main class="w-full min-h-screen bg-surface pt-[120px]">
+      @include('partials/flash_alerts')
+      {{{ await $slots.main() }}}
+    </main>
+
+    @include('partials/footer')
+  </body>
+</html>

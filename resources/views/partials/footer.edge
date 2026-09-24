@@ -1,0 +1,99 @@
+  <footer class="w-full bg-surface-container-lowest border-t border-surface-variant/40">
+    <div class="max-w-[1320px] mx-auto px-gutter-desktop py-space-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl">
+        <div class="lg:col-span-4 flex flex-col">
+          <div class="flex items-center gap-space-sm mb-space-md"><span
+              class="font-headline-md text-headline-md uppercase text-primary tracking-tight">NOVABAT
+              CONSTRUCTION</span></div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg leading-relaxed">Entreprise générale
+            de bâtiment, rénovation structurelle et ingénierie de pointe. Nous réalisons des ouvrages résidentiels de
+            prestige, sièges d'entreprises et réhabilitations complexes en Île-de-France avec rigueur architecturale et
+            ponctualité exemplaire.</p>
+          <div class="flex flex-wrap gap-space-xs font-label-technical text-label-technical"><span
+              class="px-space-xs py-0.5 bg-surface-container-high rounded text-on-surface-variant">ISO
+              9001:2015</span><span
+              class="px-space-xs py-0.5 bg-surface-container-high rounded text-on-surface-variant">QUALIBAT
+              RGE</span><span
+              class="px-space-xs py-0.5 bg-surface-container-high rounded text-on-surface-variant">GARANTIE
+              DÉCENNALE</span></div>
+        </div>
+        <div class="lg:col-span-2 flex flex-col">
+          <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mb-space-md">Plan du site</h4>
+          <ul class="flex flex-col gap-space-sm">
+            <li class="font-body-sm text-body-sm"><a
+                class="text-on-surface-variant hover:text-secondary transition-colors" data-path="accueil"
+                href="#">Accueil</a></li>
+            <li class="font-body-sm text-body-sm"><a
+                class="text-on-surface-variant hover:text-secondary transition-colors" data-path="nos-realisations"
+                href="#">Nos Réalisations</a></li>
+            <li class="font-body-sm text-body-sm"><a
+                class="text-on-surface-variant hover:text-secondary transition-colors" data-path="galerie-photos"
+                href="#">Galerie Photos</a></li>
+            <li class="font-body-sm text-body-sm"><a
+                class="text-on-surface-variant hover:text-secondary transition-colors" data-path="a-propos" href="#">À
+                Propos de l'Atelier</a></li>
+            <li class="font-body-sm text-body-sm"><a
+                class="text-on-surface-variant hover:text-secondary transition-colors" data-path="contact"
+                href="#">Contact &amp; Accès</a></li>
+            <li class="font-body-sm text-body-sm"><a class="text-secondary font-headline-sm" data-path="devis-gratuit"
+                href="#">Étude de Devis</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mb-space-md">Siège &amp; Horaires</h4>
+          <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+            <p><span class="text-on-surface font-headline-sm">Bureau Central :</span><br />24 Avenue de l'Opéra, 75001
+              Paris</p>
+            <p><span class="text-on-surface font-headline-sm">Atelier &amp; Logistique :</span><br />Zone Industrielle
+              Nord, 93400 Saint-Ouen</p>
+            <div class="pt-space-xs">
+              <p class="font-label-technical text-label-technical text-on-surface">BUREAUX : Lun - Ven : 08h00 - 18h30
+              </p>
+              <p class="font-label-technical text-label-technical text-outline">CHANTIERS : Lun - Sam : 07h00 - 19h00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-headline-sm text-headline-sm text-on-surface uppercase mb-space-md">Newsletter Chantiers</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Recevez nos analyses techniques,
+            retours d'expérience et tendances en gros œuvre &amp; architecture.</p>
+          <form
+            class="flex flex-col gap-space-xs"
+            x-data="{ subscribed: false }"
+            @submit.prevent="subscribed = true"
+          >
+            <input
+              class="w-full px-space-md py-space-sm bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary"
+              placeholder="Votre adresse email professionnelle"
+              required
+              type="email"
+              x-show="!subscribed"
+            /><button
+              class="w-full py-space-sm bg-primary hover:bg-surface-container-high text-on-primary hover:text-on-surface font-label-ui text-label-ui rounded-lg transition-colors flex items-center justify-center gap-space-xs"
+              type="submit"
+              x-show="!subscribed"
+            >
+              S'abonner au journal tech
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+            <p
+              class="flex items-center gap-space-xs font-label-technical text-label-technical text-secondary"
+              x-cloak
+              x-show="subscribed"
+            >
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Merci, votre inscription est confirmée.
+            </p>
+          </form>
+        </div>
+      </div>
+      <div
+        class="mt-space-2xl pt-space-md border-t border-surface-variant/60 flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-technical text-label-technical text-outline">
+        <p>© 2025 NOVABAT Construction SAS. Tous droits réservés.</p>
+        <div class="flex gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Mentions
+            Légales</a><a class="hover:text-on-surface transition-colors" href="#">Politique de Confidentialité</a><a
+            class="hover:text-on-surface transition-colors" href="#">Assurance Décennale AXA</a></div>
+      </div>
+    </div>
+  </footer>

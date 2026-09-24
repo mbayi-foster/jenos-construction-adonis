@@ -1,0 +1,180 @@
+<header
+  class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+  x-data="{ mobileNav: false }"
+>
+  <div
+    class="bg-surface-container-high text-on-surface-variant font-label-technical text-label-technical border-b border-surface-variant/40"
+  >
+    <div class="max-w-[1320px] mx-auto px-gutter-desktop h-10 flex items-center justify-between">
+      <div class="flex items-center gap-space-lg">
+        <span class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[15px] text-secondary">call</span><span
+            class="font-label-technical text-label-technical text-on-surface"
+          >
+            +33 1 48 52 90 00
+          </span>
+        </span><span class="hidden md:flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[15px] text-secondary">mail</span><span
+            class="font-label-technical text-label-technical"
+          >
+            contact@novabat-construction.fr
+          </span>
+        </span><span class="hidden lg:flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[15px] text-secondary">location_on</span><span
+            class="font-label-technical text-label-technical"
+          >
+            Paris &amp; Île-de-France
+          </span>
+        </span>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <span
+          class="hidden sm:inline-block font-label-technical text-label-technical text-on-surface-variant"
+        >
+          AGRÉÉ QUALIBAT &amp; RGE
+        </span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span
+          class="font-label-technical text-label-technical text-on-surface"
+        >
+          BUREAU D'ÉTUDES INTÉGRÉ
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="h-20 max-w-[1320px] mx-auto px-gutter-desktop flex items-center justify-between">
+    <div class="flex items-center gap-space-md">
+      <img
+        alt="NOVABAT Construction Logo"
+        class="h-8 w-auto object-contain"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH1DacF0yRdis_iuh2Okq8XLgX_FSjXJXrr8MrjV8AMXF-YLZOCxvUoWiJQMI2R4wCyQI85_OHxNMB_jODj3ywLEgX2AHUAFJVxMc0Y0eo7keRGWyJSdfiJK2YP65nJS6sMv8nlqLJ_BUH_xiIpWN9TJdNEDg-YN-btGXx_igH7jwNWtio_rr9xZtRF2bCCRolcKESE0rSD9rkb3R-I5gKLh10j-TrculL9gInCPyXfVLZftUnoRLb"
+      />
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary">
+          NOVABAT
+        </span><span
+          class="font-label-technical text-label-technical tracking-widest text-outline uppercase -mt-1"
+        >
+          INGÉNIERIE &amp; BÂTIMENT
+        </span>
+      </div>
+    </div>
+    <nav
+      class="hidden xl:flex items-center gap-space-lg"
+      data-active-classes="text-secondary font-headline-sm"
+    >
+      <a
+        aria-current="page"
+        class="uppercase tracking-wider transition-colors text-secondary font-headline-sm"
+        data-path="accueil"
+        href="#"
+      >
+        Accueil
+      </a><a
+        class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors"
+        data-path="nos-realisations"
+        href="#"
+      >
+        Nos Réalisations
+      </a><a
+        class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors"
+        data-path="galerie-photos"
+        href="#"
+      >
+        Galerie Photos
+      </a><a
+        class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors"
+        data-path="a-propos"
+        href="#"
+      >
+        À Propos
+      </a><a
+        class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors"
+        data-path="contact"
+        href="#"
+      >
+        Contact
+      </a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a
+        class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm bg-secondary hover:bg-secondary-container text-on-secondary rounded-lg font-label-ui text-label-ui tracking-wide shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-colors"
+        data-path="devis-gratuit"
+        href="#"
+      >
+        Demander un devis gratuit
+      </a>
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+      <button
+        class="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-outline-variant/70 text-on-surface hover:bg-surface-container transition-colors"
+        type="button"
+        aria-label="Ouvrir ou fermer le menu"
+        :aria-expanded="mobileNav"
+        @click="mobileNav = !mobileNav"
+      >
+        <span class="material-symbols-outlined" x-text="mobileNav ? 'close' : 'menu'">menu</span>
+      </button>
+    </div>
+  </div>
+
+  {{-- Navigation mobile --}}
+  <div
+    class="xl:hidden border-t border-surface-variant/40 bg-surface/95 backdrop-blur-xl"
+    x-show="mobileNav"
+    x-cloak
+    x-transition.opacity.duration.200ms
+  >
+    <nav class="max-w-[1320px] mx-auto px-gutter-desktop py-space-sm flex flex-col">
+      <a
+        class="py-space-sm border-b border-surface-variant/40 font-label-ui text-label-ui uppercase tracking-wider text-secondary"
+        data-path="accueil"
+        href="#"
+        @click="mobileNav = false"
+      >
+        Accueil
+      </a>
+      <a
+        class="py-space-sm border-b border-surface-variant/40 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant"
+        data-path="nos-realisations"
+        href="#"
+        @click="mobileNav = false"
+      >
+        Nos Réalisations
+      </a>
+      <a
+        class="py-space-sm border-b border-surface-variant/40 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant"
+        data-path="galerie-photos"
+        href="#"
+        @click="mobileNav = false"
+      >
+        Galerie Photos
+      </a>
+      <a
+        class="py-space-sm border-b border-surface-variant/40 font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant"
+        data-path="a-propos"
+        href="#"
+        @click="mobileNav = false"
+      >
+        À Propos
+      </a>
+      <a
+        class="py-space-sm font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant"
+        data-path="contact"
+        href="#"
+        @click="mobileNav = false"
+      >
+        Contact
+      </a>
+    </nav>
+    <div class="max-w-[1320px] mx-auto px-gutter-desktop pb-space-lg">
+      <a
+        class="w-full inline-flex items-center justify-center px-space-md py-space-sm bg-secondary hover:bg-secondary-container text-on-secondary rounded-lg font-label-ui text-label-ui uppercase tracking-wider transition-colors"
+        data-path="devis-gratuit"
+        href="#"
+        @click="mobileNav = false"
+      >
+        Demander un devis gratuit
+      </a>
+    </div>
+  </div>
+</header>
