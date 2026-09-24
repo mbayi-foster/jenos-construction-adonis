@@ -1,5 +1,8 @@
 import Alpine from 'alpinejs'
 
+// Inclut TOUS les fichiers du dossier resources/assets/ et de ses sous-dossiers
+import.meta.glob(['../assets/**'])
+
 Alpine.data('alert', function () {
   return {
     isVisible: false,
@@ -18,5 +21,3 @@ Alpine.data('alert', function () {
 })
 
 Alpine.start()
-
-
